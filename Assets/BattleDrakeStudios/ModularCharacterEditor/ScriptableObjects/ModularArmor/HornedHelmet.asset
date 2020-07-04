@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2823cab264e989448ae0ac1a156539d7, type: 3}
+  m_Name: HornedHelmet
+  m_EditorClassIdentifier: 
+  armorType: 0
+  armorColors:
+  - property: _Color_Primary
+    color: {r: 0.48235297, g: 0.4156863, b: 0.3529412, a: 0}
+  - property: _Color_Secondary
+    color: {r: 0.7019608, g: 0.62352943, b: 0.4666667, a: 0}
+  - property: _Color_Leather_Primary
+    color: {r: 0.30882353, g: 0.21390574, b: 0.1589533, a: 0}
+  - property: _Color_Leather_Secondary
+    color: {r: 0.372549, g: 0.3294118, b: 0.2784314, a: 0}
+  - property: _Color_Metal_Primary
+    color: {r: 0.6698113, g: 0, b: 0, a: 0}
+  - property: _Color_Metal_Secondary
+    color: {r: 1, g: 1, b: 1, a: 0}
+  - property: _Color_Metal_Dark
+    color: {r: 1, g: 1, b: 1, a: 0}
+  armorParts:
+  - bodyType: 1
+    partID: 6
+  - bodyType: 0
+    partID: 5
+  - bodyType: 5
+    partID: -1
+  - bodyType: 3
+    partID: -1
+  - bodyType: 4
+    partID: -1
