@@ -1,5 +1,7 @@
 Visit https://youtu.be/ljYOAoZYQOw and https://youtu.be/Pg6UZSdqKrYfor for video showcasing of the tool and it's use.
 
+<b>Warning:</b> Only the standard FantasyHero material currently works(You can use it as existing or create a new one from it). This appears to be an issue with Synty's pack and not my tool. All other materials, FantasyHero_01, 02 etc.. appear broken.
+
 Steps to get up and running:
 
 1. After installing package, drag and drop a Synty Modular Fantasy Hero model into the scene. 
