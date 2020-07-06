@@ -1,6 +1,7 @@
 Visit https://youtu.be/ljYOAoZYQOw and https://youtu.be/Pg6UZSdqKrYfor for video showcasing of the tool and it's use.
 
 <b>Warning:</b> Only the standard FantasyHero material currently works(You can use it as existing or create a new one from it). This appears to be an issue with Synty's pack and not my tool. All other materials in the standard and custom folders, FantasyHero_01, 02, etc.. appear broken.
+<br><b>Update:</b> I've contacted Synty regarding the material issue, and it appears to be something related to URP. They've informed me they are currently working on a solution but the current solution is to upgrade to the URP and switch the shaders. This is only if you're attempting to use any material but the default FantasyHero.
 
 Steps to get up and running:
 
