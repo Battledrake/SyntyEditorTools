@@ -80,7 +80,10 @@ namespace BattleDrakeStudios.SimpleIconCreator {
                 _previewWindow.SetBackgroundColor(_transparencyColor, true);
             }
             _previewWindow.LightOneColor = _previewLightOneColor;
+            _previewWindow.LightOneIntensity = _previewLightOneIntensity;
+
             _previewWindow.LightTwoColor = _previewLightTwoColor;
+            _previewWindow.LightTwoIntensity = _previewLightTwoIntensity;
 
             if (_bgTexture != null)
                 _previewWindow.BGTexture = _bgTexture;
