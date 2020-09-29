@@ -35,6 +35,7 @@ namespace BattleDrakeStudios.SimpleIconCreator {
         private Texture2D _bgTexture;
         private Texture2D _fgTexture;
 
+        private Color _transparencyColor;
         private Color _iconBGColor = new Color(0.192f, 0.192f, 0.192f);
         private Color _previewLightOneColor = Color.white;
         private float _previewLightOneIntensity = 1.0f;
@@ -68,13 +69,15 @@ namespace BattleDrakeStudios.SimpleIconCreator {
             _previewOptionsArea = new Rect(_xPadding, _yPadding + _previewRect.height + _yPadding, _previewRect.width, 241);
             _saveOptionsArea = new Rect(_xPadding + _previewRect.width + _xPadding, _yPadding + _previewRect.height + _yPadding, 241, 241);
 
+            _transparencyColor = Color.magenta;
+
         }
 
         private void UpdateOptionsToPreviewSettings() {
             if (!_isTransparent) {
                 _previewWindow.SetBackgroundColor(_iconBGColor);
             } else {
-                _previewWindow.SetBackgroundColor(Color.magenta, true);
+                _previewWindow.SetBackgroundColor(_transparencyColor, true);
             }
             _previewWindow.LightOneColor = _previewLightOneColor;
             _previewWindow.LightTwoColor = _previewLightTwoColor;
@@ -126,7 +129,7 @@ namespace BattleDrakeStudios.SimpleIconCreator {
                 _isTransparent = GUILayout.Toggle(_isTransparent, _isTransparent.ToString()/*, GUI.skin.button*/);
                 if (EditorGUI.EndChangeCheck()) {
                     if (_isTransparent) {
-                        _previewWindow.SetBackgroundColor(Color.magenta, true);
+                        _previewWindow.SetBackgroundColor(_transparencyColor, true);
                     } else {
                         _previewWindow.SetBackgroundColor(_iconBGColor);
                     }
@@ -343,7 +346,7 @@ namespace BattleDrakeStudios.SimpleIconCreator {
             Color[] pixels = texture.GetPixels(0, 0, texture.width, texture.height);
 
             for (int i = 0; i < pixels.Length; i++) {
-                if (pixels[i] == Color.magenta) {
+                if (pixels[i] == _transparencyColor) {
                     pixels[i] = Color.clear;
                 }
             }
