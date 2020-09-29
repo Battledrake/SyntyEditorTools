@@ -196,7 +196,7 @@ namespace BattleDrakeStudios.Utilities {
                     break;
                 case EventType.MouseDrag:
                     if (GUIUtility.hotControl == controlID) {
-                        dragValue -= new Vector2(current.delta.x, current.delta.y) * (float)((!current.shift) ? 2 : 1) / Mathf.Min(position.width, position.height);
+                        dragValue -= new Vector2(current.delta.x, current.delta.y) * (float)((!current.shift) ? 1 : 3) / Mathf.Min(position.width, position.height);
                         current.Use();
                         GUI.changed = true;
                     }
