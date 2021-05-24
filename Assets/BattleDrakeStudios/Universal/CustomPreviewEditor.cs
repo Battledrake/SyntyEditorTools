@@ -2,6 +2,8 @@
 using UnityEditor;
 using System;
 
+#if UNITY_EDITOR
+
 namespace BattleDrakeStudios.Utilities {
 
     public class CustomPreviewEditor : Editor {
@@ -215,3 +217,4 @@ namespace BattleDrakeStudios.Utilities {
         }
     }
 }
+#endif
