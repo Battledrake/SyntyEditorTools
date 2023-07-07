@@ -52,6 +52,7 @@ namespace BattleDrakeStudios.Utilities {
                 _previewUtil.camera.transform.position = new Vector3(0, 0, -3);
                 _previewUtil.camera.transform.rotation = Quaternion.identity;
                 _previewUtil.cameraFieldOfView = 30.0f;
+                _previewUtil.camera.cameraType = CameraType.SceneView;
             }
         }
 
@@ -93,7 +94,8 @@ namespace BattleDrakeStudios.Utilities {
                     return;
                 }
 
-                _previewUtil.BeginPreview(r, background);
+                _previewUtil.BeginStaticPreview(r);
+                
                 if (_targetObject != null) {
                     _targetObject.transform.position += new Vector3(-_posDrag.x, _posDrag.y, 0);
 
@@ -115,8 +117,11 @@ namespace BattleDrakeStudios.Utilities {
 
                 _previewUtil.camera.targetTexture.filterMode = _currentFilterMode;
 
+                _previewUtil.camera.clearFlags = CameraClearFlags.Color;
+
                 if (_bgTexture != null) {
                     _bgTexture.filterMode = _currentFilterMode;
+                    _previewUtil.camera.clearFlags = CameraClearFlags.Depth;
                     GUI.DrawTexture(new Rect(0, 0, r.width * 2, r.height * 2), _bgTexture, ScaleMode.StretchToFill, true);
                 }
 
