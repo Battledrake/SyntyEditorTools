@@ -69,4 +69,4 @@ Tips: You'll notice the base always spawns towards the top of the preview view. 
 To fix this, you can create an empty game object and name it Pf_ArmorCreatorBase. Afterwards, attach the modularfantasy prefab and set it's y position to -1. Run the setup wizard on the parent gameobject.
 Drag and drop the prefab into the resources folder. Now your preview object will spawn in the center of the window!
 
-The youtube video goes over all this and can be used as a reference on how to use the tool. Any additional questions or concerns can be directed to me at battledrakestudios@gmail.com
+The youtube video goes over all this and can be used as a reference on how to use the tool. Any additional questions or concerns can be directed to me at battledrakecreations@gmail.com
