@@ -108,10 +108,8 @@ namespace BattleDrakeStudios.ModularCharacters {
         public void SetPartColor(ModularBodyPart bodyPart, int partID, string colorProperty, Color newColor) {
             GameObject part = GetPartFromID(bodyPart, partID);
             if (part != null) {
-                Material tempMaterial = new Material(part.GetComponent<SkinnedMeshRenderer>().sharedMaterial);
-                tempMaterial.SetColor(colorProperty, newColor);
-                part.GetComponent<SkinnedMeshRenderer>().material = tempMaterial;
-
+                /* Learned this method of color setting only affects instanced. */
+                part.GetComponent<SkinnedMeshRenderer>().material.SetColor(colorProperty, newColor);
             }
 
         }
